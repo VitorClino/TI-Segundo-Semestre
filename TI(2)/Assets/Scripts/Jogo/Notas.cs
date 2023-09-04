@@ -21,12 +21,12 @@ public class Notas : MonoBehaviour
 
     
 
-    private Transform playerTransform;
+
     private float nextNoteSpawnTime;
 
     void Start()
     {
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+      
         nextNoteSpawnTime = Time.time + noteSpawnInterval;
         InvokeRepeating("ConfiguracaoNotas", 0.1f, 0.001f);
     }
@@ -52,22 +52,31 @@ public class Notas : MonoBehaviour
             }
 
             MoveNotes();
+            
         }
     }
 
     private void CreateNote()
     {
+        
+        int random = Random.Range(7,9);
         int numeroAleatorio = Random.Range(1,4);
-
         int spawnIndex = numeroAleatorio - 1;
+        
+        
         Vector3 spawnPosition = noteSpawnPoints[spawnIndex].position;
-        spawnPosition.y = altura;
-        GameObject newNote = Instantiate(nota, spawnPosition, Quaternion.identity);
-        Destroy(newNote, noteLifetime);
+
+        for(int i = 0; i<random; i++)
+        {
+            Debug.Log("papai");
+            GameObject newNote = Instantiate(nota, spawnPosition, Quaternion.identity);
+            Destroy(newNote, noteLifetime);
+        }
     } 
 
     private void MoveNotes()
     {
+         
         GameObject[] nota = GameObject.FindGameObjectsWithTag("Note");
         foreach (var note in nota)
         {
