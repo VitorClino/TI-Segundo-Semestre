@@ -8,6 +8,7 @@ public class Notas : MonoBehaviour
     public GameObject nota;
     public Transform[] noteSpawnPoints;
     private float noteSpawnInterval = 3.0f;
+    
     float noteIntervalMin = 1.0f;
     float noteIntervalInicial = 3.0f;
 
@@ -36,6 +37,10 @@ public class Notas : MonoBehaviour
     {
         if (Time.timeScale != 0)
         {
+            int random = Random.Range(7,9);
+            int numeroAleatorio = Random.Range(0, 3);
+            int i = 0;
+
             distanciaPercorrida += aumentoSpeed ;
 
             noteSpeed = velocidadeInicial+ (aumentoSpeed * distanciaPercorrida);
@@ -47,7 +52,7 @@ public class Notas : MonoBehaviour
 
             if (Time.time >= nextNoteSpawnTime)
             {   
-                CreateNote();
+                CreateNote(random, numeroAleatorio, i);
                 nextNoteSpawnTime = Time.time + noteSpawnInterval;
             }
 
@@ -56,23 +61,25 @@ public class Notas : MonoBehaviour
         }
     }
 
-    private void CreateNote()
+    private void CreateNote(int random, int numeroAleatorio, int i)
     {
         
-        int random = Random.Range(7,9);
-        int numeroAleatorio = Random.Range(1,4);
-        int spawnIndex = numeroAleatorio - 1;
-        
-        
-        Vector3 spawnPosition = noteSpawnPoints[spawnIndex].position;
+        i++;
+        Vector3 spawnPosition = noteSpawnPoints[numeroAleatorio].position;
 
-        for(int i = 0; i<random; i++)
+        GameObject newNote = Instantiate(nota, spawnPosition, Quaternion.identity);
+        Destroy(newNote, noteLifetime);
+        if( i< random)
         {
-            Debug.Log("papai");
-            GameObject newNote = Instantiate(nota, spawnPosition, Quaternion.identity);
-            Destroy(newNote, noteLifetime);
+            StartCoroutine(EsperarAlgunsSegundos(0.15f, random, numeroAleatorio, i));
         }
     } 
+    private IEnumerator EsperarAlgunsSegundos(float segundos, int random, int numeroAleatorio, int i)
+    {
+        yield return new WaitForSeconds(segundos);
+
+        CreateNote(random, numeroAleatorio, i);
+    }
 
     private void MoveNotes()
     {
