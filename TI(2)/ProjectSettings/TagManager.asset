@@ -8,6 +8,8 @@ TagManager:
   - Mei
   - Esq
   - Note
+  - PlayerAmarelo
+  - PlayerVermelho
   layers:
   - Default
   - TransparentFX
