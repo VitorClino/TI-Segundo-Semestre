@@ -7,89 +7,111 @@ public class Notas : MonoBehaviour
     
     public GameObject nota;
     public Transform[] noteSpawnPoints;
-    private float noteSpawnInterval = 3.0f;
     
-    float noteIntervalMin = 1.0f;
-    float noteIntervalInicial = 3.0f;
+    [Header("Configuracoes de velocidade")]
+    private float noteIntervalMin = 0.1f, noteIntervalMin2 = 0.25f, noteIntervalMax2 =55;
+    public float intervaloNotas = 0.15f,intervaloNotas2 = 0.5f, noteVelocidade=35;
+    private float aumentoSpeed = 5e-06f, aumentoSpeed2 =5e-06f , aumentoSpeed3 = 5e-05f;
+    public bool gerar = true;
 
-    public float altura = 10;
+    int rdm;
 
-    private float noteSpeed = 15;
-    public float velocidadeInicial = 15f;
-    public float aumentoSpeed = 0.009f;
-    private float distanciaPercorrida = 0; 
-    public float noteLifetime = 4;
+    [Header("Spawn de Buffs")]
+    public GameObject recurperarVida;
+    public bool buffON = true;
 
-    
-
-
-    private float nextNoteSpawnTime;
-
+     
     void Start()
     {
-      
-        nextNoteSpawnTime = Time.time + noteSpawnInterval;
-        InvokeRepeating("ConfiguracaoNotas", 0.1f, 0.001f);
+        InvokeRepeating("ConfiguracaoNotas", 1f, 0.01f);
+        InvokeRepeating("ConfiguracaoBUFFs", 1f, 0.01f);
     }
-
-    // Update is called once per frame
+    void Update()
+    {
+        if(nota.gameObject!=null)MoveNotes();
+    }
+    
+    
     private void ConfiguracaoNotas()
     {
-        if (Time.timeScale != 0)
+        if (Time.timeScale != 0 )
         {
             int random = Random.Range(7,9);
-            int numeroAleatorio = Random.Range(0, 3);
-            int i = 0;
+            rdm = Random.Range(0, 3);
+            int i =0;
 
-            distanciaPercorrida += aumentoSpeed ;
 
-            noteSpeed = velocidadeInicial+ (aumentoSpeed * distanciaPercorrida);
+            if(intervaloNotas > noteIntervalMin) intervaloNotas -= aumentoSpeed;
 
-            if (noteSpawnInterval > noteIntervalMin)
-            {
-                noteSpawnInterval = noteIntervalInicial - (aumentoSpeed * distanciaPercorrida);
-            }
-
-            if (Time.time >= nextNoteSpawnTime)
-            {   
-                CreateNote(random, numeroAleatorio, i);
-                nextNoteSpawnTime = Time.time + noteSpawnInterval;
-            }
-
-            MoveNotes();
+            if(intervaloNotas2 > noteIntervalMin2) intervaloNotas2 -= aumentoSpeed2;
             
+            if (gerar)CreateNote(random, rdm, i);
         }
     }
 
     private void CreateNote(int random, int numeroAleatorio, int i)
     {
-        
-        i++;
+        gerar = false;
         Vector3 spawnPosition = noteSpawnPoints[numeroAleatorio].position;
 
         GameObject newNote = Instantiate(nota, spawnPosition, Quaternion.identity);
-        Destroy(newNote, noteLifetime);
+        
         if( i< random)
         {
-            StartCoroutine(EsperarAlgunsSegundos(0.15f, random, numeroAleatorio, i));
+            StartCoroutine(EsperarAlgunsSegundos( intervaloNotas, random, numeroAleatorio, i));
         }
+        else if (i== random) 
+        {
+            StartCoroutine(EsperarAlgunsSegundos(intervaloNotas2, random, numeroAleatorio, i));
+        }
+        
     } 
+    
     private IEnumerator EsperarAlgunsSegundos(float segundos, int random, int numeroAleatorio, int i)
     {
         yield return new WaitForSeconds(segundos);
 
-        CreateNote(random, numeroAleatorio, i);
+        if (i == random)
+        {
+            ConfiguracaoNotas();
+            gerar = true;
+        }
+        else  CreateNote(random, numeroAleatorio, ++i);
     }
 
     private void MoveNotes()
     {
-         
+        if (noteVelocidade < noteIntervalMax2) noteVelocidade += aumentoSpeed3;
+
         GameObject[] nota = GameObject.FindGameObjectsWithTag("Note");
         foreach (var note in nota)
         {
-            note.transform.Translate(Vector3.forward * -noteSpeed * Time.deltaTime);
+            note.transform.Translate(Vector3.forward * -noteVelocidade * Time.deltaTime);
         }
+    }
+    //*******************************BUFFS*********************************
+    private void ConfiguracaoBUFFs()
+    {
+        int randomLaneBUff = Random.Range(0,3);
 
+        if(buffON)CreateBuff(randomLaneBUff);
+    }
+
+    private void CreateBuff(int random)
+    {
+        buffON = false;
+        if (random != rdm)
+        {
+        Vector3 spawnPosition = noteSpawnPoints[random].position;
+        Instantiate(recurperarVida, spawnPosition ,transform.rotation );
+        }
+        EsperarBuff(15.0f);
+    }
+    private IEnumerator EsperarBuff(float tempo)
+    {
+        yield return new WaitForSeconds(tempo);
+        buffON = true;
+        ConfiguracaoBUFFs();
     }
 }
 

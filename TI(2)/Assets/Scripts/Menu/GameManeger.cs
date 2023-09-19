@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManeger : MonoBehaviour
 {
-    //public string cenaDestino; 
     public void CarregarCenaDestino(string cenaDestino )
     {
         SceneManager.LoadScene(cenaDestino);
     }
+    
 }

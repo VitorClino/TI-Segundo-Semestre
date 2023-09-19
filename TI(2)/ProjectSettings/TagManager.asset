@@ -10,11 +10,12 @@ TagManager:
   - Note
   - PlayerAmarelo
   - PlayerVermelho
+  - BuffRecuperarVida
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 

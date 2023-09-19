@@ -1,29 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
     public GameObject[] player;
     private GameObject auxPlayer;
 
-    public static GameController instance;
-
     public Vector3 spawn;
-
-    public int escolha = 0;
+    private static string qualPlayer;
+    
     void Start()
     {
-        instance = this;
         Time.timeScale = 1;
-
-        auxPlayer = Instantiate(player[escolha], spawn, transform.rotation);
-
-        DontDestroyOnLoad(this.gameObject);
+        auxPlayer = Instantiate(player[0], spawn, transform.rotation);
+        
     }
-
-    
-
     public void CriarPlayer(int i)
     {
         int personagem = 0;
@@ -42,13 +35,15 @@ public class GameController : MonoBehaviour
             Destroy(auxPlayer);
             auxPlayer = Instantiate(player[j], spawn , transform.rotation );
         }
-        if (auxPlayer.tag == "PlayerVermelho") escolha = 0;
+        if(auxPlayer.tag == "PlayerAmarelo") qualPlayer="PlayerAmarelo";
 
-        if (auxPlayer.tag == "PlayerAmarelo" ) escolha = 1;
+        if (auxPlayer.tag == "PlayerVermelho") qualPlayer="PlayerVermelho";
 
-
-        Debug.Log(escolha);
+        Debug.Log(qualPlayer);
     }
-    
-
+    public static string QualPlayer
+    {
+        get {return qualPlayer;}
+        set {qualPlayer = value;}
+    }
 }
