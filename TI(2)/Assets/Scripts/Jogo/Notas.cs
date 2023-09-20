@@ -19,6 +19,7 @@ public class Notas : MonoBehaviour
     [Header("Spawn de Buffs")]
     public GameObject recurperarVida;
     public bool buffON = true;
+    private GameObject newBuff;
 
      
     void Start()
@@ -103,14 +104,16 @@ public class Notas : MonoBehaviour
         if (random != rdm)
         {
         Vector3 spawnPosition = noteSpawnPoints[random].position;
-        Instantiate(recurperarVida, spawnPosition ,transform.rotation );
+        newBuff=Instantiate(recurperarVida, spawnPosition ,transform.rotation);
+        newBuff.GetComponent<Rigidbody>().velocity = transform.forward * -noteVelocidade;
         }
-        EsperarBuff(15.0f);
+        EsperarBuff(10.0f);
     }
     private IEnumerator EsperarBuff(float tempo)
     {
         yield return new WaitForSeconds(tempo);
         buffON = true;
+        
         ConfiguracaoBUFFs();
     }
 }

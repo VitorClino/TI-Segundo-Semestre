@@ -1,26 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Data.Common;
+
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VIda : MonoBehaviour
 {
-    public static int vida = 10;
+    public int vida =10;
     public bool IMORTAL = false;
     public GameObject panel;
-    
+    public Text m_Vida;
     void OnEnable()
     {
         vida = 10;
-        InvokeRepeating("Derrota", 0.1f, 0.5f);
+        InvokeRepeating("RecuperarVida", 0.1f, 0.2f);
+        InvokeRepeating("Derrota", 0.1f, 0.1f);
     }
     void OnTriggerEnter(Collider other)
     {
-        if (IMORTAL == false)vida--;
+        if (IMORTAL == false||other.gameObject.CompareTag("Note")) vida--;
         else vida = 10;
-        Debug.Log($"vida = {vida}");
         Destroy(other.gameObject);
+        m_Vida.text = $"Vida: {vida.ToString()}";
 
     }
     void Derrota()
@@ -31,9 +31,11 @@ public class VIda : MonoBehaviour
             Time.timeScale = 0;
         }
     }
-    public static int Vida
+    public void RecuperarVida(bool recuperar)
     {
-        get {return vida;}
-        set {vida = value;}
+        if (recuperar){
+        vida=10;
+        Debug.Log(vida);
+        }
     }
 }

@@ -1,44 +1,50 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.iOS;
-public class PlayerController : MonoBehaviour
+using UnityEngine.UI;
+using Unity.VisualScripting;
+public class MovimentoPlayer : MonoBehaviour
 {
 
     public Transform[] paths;
 
     public float speed = 5f, laneChangeSpeed = 5f;
     public int currentPathIndex = 1;
+    public InputManager inputManager;
+    public Vector2 startPos, direction;
+    public Text m_Text; string message;
 
-   private Vector3 position;
-    private float width;
-    private float height;
-
-    void Awake()
+    [Header("Pisca quando toma dano")]
+    public Material materialOriginal;
+    public Material materialDano;
+    private int life = 10;
+    private int vidaAtual;
+    private Renderer playerRenderer;
+    void OnEnable()
     {
-        width = (float)Screen.width / 2.0f;
-        height = (float)Screen.height / 2.0f;
-
-        position = new Vector3(0.0f, 0.0f, 0.0f);
+        vidaAtual = life;
+        playerRenderer = GetComponent<Renderer>();
+        playerRenderer.material = materialOriginal;
+        InvokeRepeating("TrocaCor", 0.1f, 0.5f);
     }
-
-    void OnGUI()
+    /*void Update()
     {
-
-        GUI.skin.label.fontSize = (int)(Screen.width / 25.0f);
-
-        GUI.Label(new Rect(20, 20, width, height * 0.25f),
-            "x = " + position.x.ToString("f2") +
-            ", y = " + position.y.ToString("f2"));
-    }
-
-    void Update()
-    {
+        m_Text.text = $"Touch : {message} in direction {direction}";
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
+            switch( touch.phase)
+            {
+                case TouchPhase.Began: startPos = touch.position;
+                            message = "Begun "; break;
+                case TouchPhase.Moved: direction = touch.position - startPos;
+                            message = "Moving "; break;
+                case TouchPhase.Ended:
+                            message = "Ending "; break;
+            }
+            Debug.Log(m_Text);
 
-
-            if (touch.phase == TouchPhase.Moved)
+            /*if (touch.phase == TouchPhase.Moved)
             {
                 Vector2 pos = touch.position;
                 pos.x = (pos.x - width) / width;
@@ -64,9 +70,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-    }
-
-        
+    }*/
     public void ChangeLane(int direction)
     {
         int newPathIndex = currentPathIndex + direction;
@@ -75,8 +79,27 @@ public class PlayerController : MonoBehaviour
         {
             currentPathIndex = newPathIndex;
         }
-
         transform.position = new Vector3(paths[currentPathIndex].position.x, transform.position.y, 0);
+    }
+    public void TrocaCor()
+    {
+        Debug.Log("vida " + life);
+        if(vidaAtual>life)
+        {
+            TakeDamage();
+            vidaAtual--;
+        }
+    }
+    public void TakeDamage(){
+        playerRenderer.material= materialDano;
+        Esperar(0.2f); 
+    }
+    public void Heal(){
+        playerRenderer.material= materialOriginal;
+    }
+    public IEnumerator Esperar(float time){
+        yield return new WaitForSeconds(time);
+        Heal();
     }
 }
 

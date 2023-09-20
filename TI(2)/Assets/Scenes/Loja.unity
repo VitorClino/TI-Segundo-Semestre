@@ -1328,7 +1328,7 @@ MonoBehaviour:
   player:
   - {fileID: 2108753344765475383, guid: 80ba5b6916c128948a5b08a9246dc429, type: 3}
   - {fileID: 1083400554017548484, guid: e69d6cdc2ec96a746a0d75c50fd3f7e2, type: 3}
-  spawn: {x: 0.1, y: 0.2, z: -4.2}
+  spawn: {x: 0.1, y: 0.2, z: -10}
 --- !u!1 &1729867571
 GameObject:
   m_ObjectHideFlags: 0

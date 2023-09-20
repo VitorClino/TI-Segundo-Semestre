@@ -6,11 +6,10 @@ public class Pontos : MonoBehaviour
 {
     public Text scoreText;
     int score;
-    void Start()
+    void OnEnable()
     {
         score = 0;
     }
-    
     void OnTriggerEnter(Collider collider)
     {
         if (collider.CompareTag("Note"))
@@ -20,5 +19,4 @@ public class Pontos : MonoBehaviour
             Destroy(collider.gameObject);
         }
     }
-    
 }
