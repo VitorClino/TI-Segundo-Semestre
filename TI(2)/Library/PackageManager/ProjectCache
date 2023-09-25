@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638284074765053082
-    m_Hash: 791157502
+      ticks: 638311365994504325
+    m_Hash: 3121471884
   m_LockFileStatus:
     m_FilePath: C:/Users/User/TI(2)/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638284074766991846
-    m_Hash: 243170685
+      ticks: 638311613996448985
+    m_Hash: 2248055038
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -22,6 +22,223 @@ m_LocalPackages:
 m_ProjectPath: C:/Users/User/TI(2)/Packages
 m_EditorVersion: 2022.3.7f1 (b16b3b16c7a0)
 m_ResolvedPackages:
+- packageId: com.unity.adaptiveperformance.google.android@1.2.1
+  testable: 0
+  isDirectDependency: 1
+  version: 1.2.1
+  source: 1
+  resolvedPath: C:\Users\User\TI(2)\Library\PackageCache\com.unity.adaptiveperformance.google.android@1.2.1
+  assetPath: Packages/com.unity.adaptiveperformance.google.android
+  name: com.unity.adaptiveperformance.google.android
+  displayName: Adaptive Performance Android
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: assets
+  description: "The Adaptive Performance Android package provides the Adaptive Performance
+    subsystem for Android platforms and works in combination with Adaptive Performance.
+    \n\nBy installing this package, you agree to the terms and conditions of the
+    Unity End User License Agreement found under \"View licenses\" above."
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 1.0.0-pre.2
+    - 1.0.0-pre.3
+    - 1.0.0-pre.4
+    - 1.0.0
+    - 1.1.0
+    - 1.1.1
+    - 1.1.2
+    - 1.2.0
+    - 1.2.1
+    compatible:
+    - 1.2.0
+    - 1.2.1
+    recommended: 
+    deprecated: []
+  dependencies:
+  - name: com.unity.adaptiveperformance
+    version: 5.0.0
+  resolvedDependencies:
+  - name: com.unity.adaptiveperformance
+    version: 5.0.0
+  - name: com.unity.profiling.core
+    version: 1.0.2
+  keywords:
+  - mobile
+  - adaptive
+  - performance
+  - utility
+  - utilities
+  - core
+  - google
+  - ap
+  - provider
+  - subsystem
+  - gamesdk
+  - VRR
+  - indexer
+  - scaler
+  - boost
+  - profiles
+  - cluster
+  - clusterinfo
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638290079480000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.adaptiveperformance.google.android@1.2/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.adaptiveperformance.google.android.git
+    revision: 697e7504710c2f0d20ab6eed14b80a20da9c02b5
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+- packageId: com.unity.adaptiveperformance.samsung.android@5.0.0
+  testable: 0
+  isDirectDependency: 1
+  version: 5.0.0
+  source: 1
+  resolvedPath: C:\Users\User\TI(2)\Library\PackageCache\com.unity.adaptiveperformance.samsung.android@5.0.0
+  assetPath: Packages/com.unity.adaptiveperformance.samsung.android
+  name: com.unity.adaptiveperformance.samsung.android
+  displayName: Adaptive Performance Samsung Android
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: asset
+  description: "The Adaptive Performance Samsung (Android) package provides the Adaptive
+    Performance subsystem for Samsung Android platforms and works in combination
+    with Adaptive Performance. \n\nBy installing this package, you agree to the terms
+    and conditions of the Samsung GameSDK End User License Agreement found under
+    \"View licenses\" above."
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 0.2.0-preview.1
+    - 1.0.0
+    - 1.0.1
+    - 1.0.2-preview.1
+    - 1.1.0-preview.2
+    - 1.1.0
+    - 1.1.1
+    - 1.1.2
+    - 1.1.3
+    - 1.1.4
+    - 1.1.6
+    - 1.1.9
+    - 1.1.10
+    - 1.2.1
+    - 1.2.2
+    - 1.2.3
+    - 2.0.0-preview.4
+    - 2.0.0-preview.7
+    - 2.0.0-preview.8
+    - 2.0.0-preview.9
+    - 2.0.0-preview.10
+    - 2.0.0-preview.11
+    - 2.0.0
+    - 2.0.1
+    - 2.0.2
+    - 2.1.0
+    - 2.1.1
+    - 2.2.1
+    - 2.2.2
+    - 2.2.4
+    - 2.2.5
+    - 3.0.0-pre.2
+    - 3.0.0
+    - 3.0.1
+    - 3.0.3
+    - 3.0.4
+    - 4.0.0-pre.1
+    - 4.0.0
+    - 4.0.1
+    - 4.0.2
+    - 5.0.0-pre.1
+    - 5.0.0-pre.2
+    - 5.0.0
+    compatible:
+    - 4.0.2
+    - 5.0.0-pre.1
+    - 5.0.0-pre.2
+    - 5.0.0
+    recommended: 4.0.2
+    deprecated: []
+  dependencies:
+  - name: com.unity.adaptiveperformance
+    version: 5.0.0
+  resolvedDependencies:
+  - name: com.unity.adaptiveperformance
+    version: 5.0.0
+  - name: com.unity.profiling.core
+    version: 1.0.2
+  keywords:
+  - mobile
+  - adaptive
+  - performance
+  - utility
+  - utilities
+  - core
+  - samsung
+  - ap
+  - provider
+  - subsystem
+  - gamesdk
+  - VRR
+  - indexer
+  - scaler
+  - boost
+  - profiles
+  - cluster
+  - clusterinfo
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638158713650000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.adaptiveperformance.samsung.android@5.0/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.adaptiveperformance.samsung.android.git
+    revision: 11a249c3a7df60f3bfff228fa7f1496991f40dfb
+    path: 
+  unityLifecycle:
+    version: 4.0.2
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
 - packageId: com.unity.ai.navigation@1.1.4
   testable: 0
   isDirectDependency: 1
@@ -90,12 +307,12 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.collab-proxy@2.0.5
+- packageId: com.unity.collab-proxy@2.0.7
   testable: 0
   isDirectDependency: 1
-  version: 2.0.5
+  version: 2.0.7
   source: 1
-  resolvedPath: C:\Users\User\TI(2)\Library\PackageCache\com.unity.collab-proxy@2.0.5
+  resolvedPath: C:\Users\User\TI(2)\Library\PackageCache\com.unity.collab-proxy@2.0.7
   assetPath: Packages/com.unity.collab-proxy
   name: com.unity.collab-proxy
   displayName: Version Control
@@ -180,12 +397,14 @@ m_ResolvedPackages:
     - 2.1.0-preview.3
     - 2.1.0-preview.5
     - 2.1.0-preview.6
+    - 2.1.0
     compatible:
     - 2.0.5
     - 2.0.7
     - 2.1.0-preview.3
     - 2.1.0-preview.5
     - 2.1.0-preview.6
+    - 2.1.0
     recommended: 2.0.7
     deprecated: []
   dependencies: []
@@ -215,16 +434,76 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638218079810000000
+  datePublishedTicks: 638264754080000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.collab-proxy@2.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.cloud.collaborate.git
-    revision: 7f68049e8cae5b51ad0d17cc01b8c6e802bf3866
+    revision: 13a0e74f47307a1b20a57747cea59891ce36a647
     path: 
   unityLifecycle:
     version: 2.0.5
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+- packageId: com.unity.device-simulator.devices@1.0.0
+  testable: 0
+  isDirectDependency: 1
+  version: 1.0.0
+  source: 1
+  resolvedPath: C:\Users\User\TI(2)\Library\PackageCache\com.unity.device-simulator.devices@1.0.0
+  assetPath: Packages/com.unity.device-simulator.devices
+  name: com.unity.device-simulator.devices
+  displayName: Device Simulator Devices
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: asset
+  description: This package contains additional devices for the Device Simulator.
+    Each device has a complete device definition and includes a device overlay. After
+    you install this package, the additional devices are immediately available in
+    the Device Simulator.
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 1.0.0-pre.1
+    - 1.0.0-pre.2
+    - 1.0.0-pre.4
+    - 1.0.0
+    compatible:
+    - 1.0.0
+    recommended: 1.0.0
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637810555200000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.device-simulator.devices.git
+    revision: 2e1ffaaea0624daf91ee6c76906fd119dbd584c6
+    path: 
+  unityLifecycle:
+    version: 1.0.0
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -268,13 +547,7 @@ m_ResolvedPackages:
   - name: com.unity.mobile.android-logcat
     version: 1.3.2
   - name: com.unity.adaptiveperformance
-    version: 4.0.1
-  - name: com.unity.subsystemregistration
-    version: 1.1.1
-  - name: com.unity.modules.subsystems
-    version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
+    version: 5.0.0
   - name: com.unity.profiling.core
     version: 1.0.2
   - name: com.unity.mobile.notifications
@@ -368,9 +641,11 @@ m_ResolvedPackages:
     - 3.0.21
     - 3.0.22
     - 3.0.24
+    - 3.0.25
     compatible:
     - 3.0.24
-    recommended: 3.0.24
+    - 3.0.25
+    recommended: 3.0.25
     deprecated: []
   dependencies:
   - name: com.unity.ext.nunit
@@ -449,10 +724,12 @@ m_ResolvedPackages:
     - 2.0.17
     - 2.0.18
     - 2.0.20
+    - 2.0.21
     compatible:
     - 2.0.18
     - 2.0.20
-    recommended: 2.0.20
+    - 2.0.21
+    recommended: 2.0.21
     deprecated: []
   dependencies:
   - name: com.unity.test-framework
@@ -555,120 +832,6 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 1.2.5
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-- packageId: com.unity.inputsystem@1.6.3
-  testable: 0
-  isDirectDependency: 1
-  version: 1.6.3
-  source: 1
-  resolvedPath: C:\Users\User\TI(2)\Library\PackageCache\com.unity.inputsystem@1.6.3
-  assetPath: Packages/com.unity.inputsystem
-  name: com.unity.inputsystem
-  displayName: Input System
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: assets
-  description: A new input system which can be used as a more extensible and customizable
-    alternative to Unity's classic input system in UnityEngine.Input.
-  status: 0
-  errors: []
-  versions:
-    all:
-    - 0.1.2-preview
-    - 0.2.0-preview
-    - 0.2.1-preview
-    - 0.2.6-preview
-    - 0.2.8-preview
-    - 0.2.10-preview
-    - 0.9.0-preview
-    - 0.9.1-preview
-    - 0.9.2-preview
-    - 0.9.3-preview
-    - 0.9.4-preview
-    - 0.9.5-preview
-    - 0.9.6-preview
-    - 1.0.0-preview
-    - 1.0.0-preview.1
-    - 1.0.0-preview.2
-    - 1.0.0-preview.3
-    - 1.0.0-preview.4
-    - 1.0.0-preview.5
-    - 1.0.0-preview.6
-    - 1.0.0-preview.7
-    - 1.0.0
-    - 1.0.1
-    - 1.0.2
-    - 1.1.0-pre.5
-    - 1.1.0-pre.6
-    - 1.1.0-preview.1
-    - 1.1.0-preview.2
-    - 1.1.0-preview.3
-    - 1.1.1
-    - 1.2.0
-    - 1.3.0
-    - 1.4.1
-    - 1.4.2
-    - 1.4.3
-    - 1.4.4
-    - 1.5.0
-    - 1.5.1
-    - 1.6.1
-    - 1.6.3
-    - 1.7.0
-    compatible:
-    - 1.6.3
-    - 1.7.0
-    recommended: 1.6.3
-    deprecated: []
-  dependencies:
-  - name: com.unity.modules.uielements
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.modules.uielements
-    version: 1.0.0
-  - name: com.unity.modules.ui
-    version: 1.0.0
-  - name: com.unity.modules.imgui
-    version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  keywords:
-  - input
-  - events
-  - keyboard
-  - mouse
-  - gamepad
-  - touch
-  - vr
-  - xr
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 638251794420000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.inputsystem@1.6/manual/index.html
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.com/Unity-Technologies/InputSystem.git
-    revision: 0d0891efc00ce912af6f03974eac0b8afd20a8ac
-    path: 
-  unityLifecycle:
-    version: 1.6.3
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -1084,6 +1247,7 @@ m_ResolvedPackages:
     - 1.8.2
     - 1.8.3
     - 1.8.4
+    - 1.8.5
     compatible:
     - 1.7.5
     - 1.8.0
@@ -1091,6 +1255,7 @@ m_ResolvedPackages:
     - 1.8.2
     - 1.8.3
     - 1.8.4
+    - 1.8.5
     recommended: 1.7.5
     deprecated: []
   dependencies:
@@ -1214,12 +1379,12 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.visualscripting@1.8.0
+- packageId: com.unity.visualscripting@1.9.0
   testable: 0
   isDirectDependency: 1
-  version: 1.8.0
+  version: 1.9.0
   source: 1
-  resolvedPath: C:\Users\User\TI(2)\Library\PackageCache\com.unity.visualscripting@1.8.0
+  resolvedPath: C:\Users\User\TI(2)\Library\PackageCache\com.unity.visualscripting@1.9.0
   assetPath: Packages/com.unity.visualscripting
   name: com.unity.visualscripting
   displayName: Visual Scripting
@@ -1263,9 +1428,11 @@ m_ResolvedPackages:
     - 1.8.0-pre.1
     - 1.8.0
     - 1.9.0
+    - 1.9.1
     compatible:
     - 1.8.0
     - 1.9.0
+    - 1.9.1
     recommended: 1.8.0
     deprecated:
     - 1.8.0-pre.1
@@ -1294,13 +1461,13 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638060044680000000
+  datePublishedTicks: 638267547090000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.visualscripting.git
-    revision: 0de66378b19e990494d98f39ecc2b6aa5ac65351
+    revision: 21b38599b7fcf9bdccd964bdb90710e6a1094810
     path: 
   unityLifecycle:
     version: 1.8.0
@@ -3357,12 +3524,120 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.adaptiveperformance@4.0.1
+- packageId: com.unity.mobile.notifications@2.2.1
   testable: 0
   isDirectDependency: 0
-  version: 4.0.1
+  version: 2.2.1
   source: 1
-  resolvedPath: C:\Users\User\TI(2)\Library\PackageCache\com.unity.adaptiveperformance@4.0.1
+  resolvedPath: C:\Users\User\TI(2)\Library\PackageCache\com.unity.mobile.notifications@2.2.1
+  assetPath: Packages/com.unity.mobile.notifications
+  name: com.unity.mobile.notifications
+  displayName: Mobile Notifications
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: assets
+  description: 'Mobile Notifications package adds support for scheduling local repeatable
+    or one-time notifications on iOS and Android.
+
+
+    On iOS receiving of push
+    notifications is also supported.'
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 1.0.0-preview.4
+    - 1.0.0-preview.5
+    - 1.0.0-preview.7
+    - 1.0.0-preview.8
+    - 1.0.0-preview.9
+    - 1.0.0-preview.10
+    - 1.0.0-preview.13
+    - 1.0.0-preview.17
+    - 1.0.0-preview.21
+    - 1.0.0-preview.23
+    - 1.0.2
+    - 1.0.3-preview
+    - 1.0.3-preview.3
+    - 1.0.3-preview.4
+    - 1.0.3-preview.5
+    - 1.0.3-preview.6
+    - 1.0.3
+    - 1.0.4-preview.1
+    - 1.0.4-preview.2
+    - 1.0.4-preview.3
+    - 1.0.4-preview.4
+    - 1.0.4-preview.5
+    - 1.0.4-preview.6
+    - 1.0.4-preview.9
+    - 1.1.0-preview
+    - 1.2.0-preview
+    - 1.2.1-preview
+    - 1.3.0
+    - 1.3.2
+    - 1.4.1
+    - 1.4.2
+    - 1.4.3
+    - 1.4.4
+    - 2.0.0
+    - 2.0.1
+    - 2.0.2
+    - 2.1.0
+    - 2.1.1
+    - 2.2.0
+    - 2.2.1
+    - 2.2.2
+    compatible:
+    - 2.2.1
+    - 2.2.2
+    recommended: 2.2.2
+    deprecated: []
+  dependencies:
+  - name: com.unity.modules.androidjni
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.modules.androidjni
+    version: 1.0.0
+  keywords:
+  - Android
+  - iOS
+  - Notifications
+  - Mobile
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638254523710000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.mobile.notifications@2.2/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/com.unity.mobile.notifications.git
+    revision: 3304aac282fce2960fb70ce28b42ee1e3770a210
+    path: 
+  unityLifecycle:
+    version: 2.2.1
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+- packageId: com.unity.adaptiveperformance@5.0.0
+  testable: 0
+  isDirectDependency: 0
+  version: 5.0.0
+  source: 1
+  resolvedPath: C:\Users\User\TI(2)\Library\PackageCache\com.unity.adaptiveperformance@5.0.0
   assetPath: Packages/com.unity.adaptiveperformance
   name: com.unity.adaptiveperformance
   displayName: Adaptive Performance
@@ -3432,6 +3707,7 @@ m_ResolvedPackages:
     - 5.0.0-pre.4
     - 5.0.0
     - 5.0.1
+    - 5.0.2
     compatible:
     - 4.0.1
     - 5.0.0-pre.1
@@ -3440,20 +3716,13 @@ m_ResolvedPackages:
     - 5.0.0-pre.4
     - 5.0.0
     - 5.0.1
+    - 5.0.2
     recommended: 4.0.1
     deprecated: []
   dependencies:
-  - name: com.unity.subsystemregistration
-    version: 1.1.0
   - name: com.unity.profiling.core
     version: 1.0.2
   resolvedDependencies:
-  - name: com.unity.subsystemregistration
-    version: 1.1.1
-  - name: com.unity.modules.subsystems
-    version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
   - name: com.unity.profiling.core
     version: 1.0.2
   keywords:
@@ -3484,193 +3753,16 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637940147290000000
-  documentationUrl: 
+  datePublishedTicks: 638158713640000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.adaptiveperformance@5.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.adaptiveperformance.git
-    revision: 08f36a7c7e7e80b8ec602e108f0e40d1661540b5
+    revision: ef9aded8b3178a1e7593de3c0cba3b0475ce2c18
     path: 
   unityLifecycle:
     version: 4.0.1
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-- packageId: com.unity.mobile.notifications@2.2.1
-  testable: 0
-  isDirectDependency: 0
-  version: 2.2.1
-  source: 1
-  resolvedPath: C:\Users\User\TI(2)\Library\PackageCache\com.unity.mobile.notifications@2.2.1
-  assetPath: Packages/com.unity.mobile.notifications
-  name: com.unity.mobile.notifications
-  displayName: Mobile Notifications
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: assets
-  description: 'Mobile Notifications package adds support for scheduling local repeatable
-    or one-time notifications on iOS and Android.
-
-
-    On iOS receiving of push
-    notifications is also supported.'
-  status: 0
-  errors: []
-  versions:
-    all:
-    - 1.0.0-preview.4
-    - 1.0.0-preview.5
-    - 1.0.0-preview.7
-    - 1.0.0-preview.8
-    - 1.0.0-preview.9
-    - 1.0.0-preview.10
-    - 1.0.0-preview.13
-    - 1.0.0-preview.17
-    - 1.0.0-preview.21
-    - 1.0.0-preview.23
-    - 1.0.2
-    - 1.0.3-preview
-    - 1.0.3-preview.3
-    - 1.0.3-preview.4
-    - 1.0.3-preview.5
-    - 1.0.3-preview.6
-    - 1.0.3
-    - 1.0.4-preview.1
-    - 1.0.4-preview.2
-    - 1.0.4-preview.3
-    - 1.0.4-preview.4
-    - 1.0.4-preview.5
-    - 1.0.4-preview.6
-    - 1.0.4-preview.9
-    - 1.1.0-preview
-    - 1.2.0-preview
-    - 1.2.1-preview
-    - 1.3.0
-    - 1.3.2
-    - 1.4.1
-    - 1.4.2
-    - 1.4.3
-    - 1.4.4
-    - 2.0.0
-    - 2.0.1
-    - 2.0.2
-    - 2.1.0
-    - 2.1.1
-    - 2.2.0
-    - 2.2.1
-    compatible:
-    - 2.2.1
-    recommended: 2.2.1
-    deprecated: []
-  dependencies:
-  - name: com.unity.modules.androidjni
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.modules.androidjni
-    version: 1.0.0
-  keywords:
-  - Android
-  - iOS
-  - Notifications
-  - Mobile
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 638254523710000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.mobile.notifications@2.2/manual/index.html
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.com/Unity-Technologies/com.unity.mobile.notifications.git
-    revision: 3304aac282fce2960fb70ce28b42ee1e3770a210
-    path: 
-  unityLifecycle:
-    version: 2.2.1
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-- packageId: com.unity.subsystemregistration@1.1.1
-  testable: 0
-  isDirectDependency: 0
-  version: 1.1.1
-  source: 1
-  resolvedPath: C:\Users\User\TI(2)\Library\PackageCache\com.unity.subsystemregistration@1.1.1
-  assetPath: Packages/com.unity.subsystemregistration
-  name: com.unity.subsystemregistration
-  displayName: Subsystem Registration
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: asset
-  description: Provides internal registration mechanism for standalone subsystems. 
-    It allows a standalone subsystem to inform the Subsystem Manager of its existence.
-  status: 0
-  errors: []
-  versions:
-    all:
-    - 1.0.0-preview.4
-    - 1.0.4
-    - 1.0.5
-    - 1.0.6
-    - 1.1.0
-    - 1.1.1
-    - 1.1.2
-    compatible:
-    - 1.1.1
-    - 1.1.2
-    recommended: 1.1.2
-    deprecated: []
-  dependencies:
-  - name: com.unity.modules.subsystems
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.modules.subsystems
-    version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  keywords:
-  - subsystem
-  - registration
-  - internal
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 637703478850000000
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/com.unity.subsystemregistration.git
-    revision: 0aafce17de537879b970cedf309038c8d227ec05
-    path: 
-  unityLifecycle:
-    version: 1.1.1
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0

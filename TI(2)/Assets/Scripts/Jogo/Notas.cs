@@ -18,14 +18,14 @@ public class Notas : MonoBehaviour
 
     [Header("Spawn de Buffs")]
     public GameObject recurperarVida;
-    public bool buffON = true;
     private GameObject newBuff;
-
+    int randomLaneBUff;
+    bool  CriarBuff =true;
      
     void Start()
     {
         InvokeRepeating("ConfiguracaoNotas", 1f, 0.01f);
-        InvokeRepeating("ConfiguracaoBUFFs", 1f, 0.01f);
+        InvokeRepeating("ConfiguracaoBUFFs", 1f, 5.0f);
     }
     void Update()
     {
@@ -38,9 +38,13 @@ public class Notas : MonoBehaviour
         if (Time.timeScale != 0 )
         {
             int random = Random.Range(7,9);
-            rdm = Random.Range(0, 3);
-            int i =0;
 
+            rdm = Random.Range(0, 3);
+            int auxRandomBuff = Random.Range(0,3);
+            if(auxRandomBuff == rdm)CriarBuff = false;
+            else {randomLaneBUff = auxRandomBuff;
+                                CriarBuff = true;}
+            int i =0;
 
             if(intervaloNotas > noteIntervalMin) intervaloNotas -= aumentoSpeed;
 
@@ -57,14 +61,9 @@ public class Notas : MonoBehaviour
 
         GameObject newNote = Instantiate(nota, spawnPosition, Quaternion.identity);
         
-        if( i< random)
-        {
-            StartCoroutine(EsperarAlgunsSegundos( intervaloNotas, random, numeroAleatorio, i));
-        }
-        else if (i== random) 
-        {
-            StartCoroutine(EsperarAlgunsSegundos(intervaloNotas2, random, numeroAleatorio, i));
-        }
+        if( i< random)StartCoroutine(EsperarAlgunsSegundos( intervaloNotas, random, numeroAleatorio, i));
+        
+        else if (i== random)  StartCoroutine(EsperarAlgunsSegundos(intervaloNotas2, random, numeroAleatorio, i));
         
     } 
     
@@ -93,29 +92,25 @@ public class Notas : MonoBehaviour
     //*******************************BUFFS*********************************
     private void ConfiguracaoBUFFs()
     {
-        int randomLaneBUff = Random.Range(0,3);
-
-        if(buffON)CreateBuff(randomLaneBUff);
+        if (CriarBuff == true) CreateBuff(randomLaneBUff);
+        
+        else Debug.Log("ai papai");
     }
 
     private void CreateBuff(int random)
     {
-        buffON = false;
-        if (random != rdm)
-        {
         Vector3 spawnPosition = noteSpawnPoints[random].position;
         newBuff=Instantiate(recurperarVida, spawnPosition ,transform.rotation);
         newBuff.GetComponent<Rigidbody>().velocity = transform.forward * -noteVelocidade;
-        }
-        EsperarBuff(10.0f);
+        
+        //EsperarBuff(5.0f);
     }
-    private IEnumerator EsperarBuff(float tempo)
+    /*private IEnumerator EsperarBuff(float tempo)
     {
         yield return new WaitForSeconds(tempo);
         buffON = true;
-        
         ConfiguracaoBUFFs();
-    }
+    }*/
 }
 
 

@@ -92,8 +92,9 @@ GameObject:
   - component: {fileID: 4657168940595455853}
   - component: {fileID: 7117898423355264620}
   - component: {fileID: 4400672015837855854}
-  - component: {fileID: 8672230111847246907}
   - component: {fileID: 3843447755250166451}
+  - component: {fileID: 4743995716499245061}
+  - component: {fileID: 3986544639524298720}
   m_Layer: 3
   m_Name: PlayerVermelho
   m_TagString: PlayerVermelho
@@ -201,7 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 3287975586981437027}
---- !u!114 &8672230111847246907
+--- !u!114 &3843447755250166451
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -210,34 +211,55 @@ MonoBehaviour:
   m_GameObject: {fileID: 1083400554017548484}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58d7c99c9591803429b990afe24ba879, type: 3}
+  m_Script: {fileID: 11500000, guid: 14f93d489f3720a4eb8b69c072e469b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  aiPaiPara: 1
-  vIda: {fileID: 0}
---- !u!114 &3843447755250166451
+  currentPathIndex: 1
+  startPos: {x: 0, y: 0}
+  direction: {x: 0, y: 0}
+  distanciaMin: 15
+  moveSpeed: 90
+--- !u!114 &4743995716499245061
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1083400554017548484}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14f93d489f3720a4eb8b69c072e469b1, type: 3}
+  m_Script: {fileID: 11500000, guid: e92d7a3ec742129449720e4df60814ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paths: []
-  speed: 5
-  laneChangeSpeed: 5
-  currentPathIndex: 1
-  inputManager: {fileID: 0}
-  startPos: {x: 0, y: 0}
-  direction: {x: 0, y: 0}
-  m_Text: {fileID: 0}
   materialOriginal: {fileID: 2100000, guid: a7427774a27a20d488e07f6871a8fc34, type: 2}
   materialDano: {fileID: 2100000, guid: 86145f34f2332d945bc606e7956b4116, type: 2}
+--- !u!54 &3986544639524298720
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083400554017548484}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2309337727503640754
 GameObject:
   m_ObjectHideFlags: 0

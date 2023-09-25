@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TrocaCorDano : MonoBehaviour
 {
+    
     [Header("Pisca quando toma dano")]
     public Material materialOriginal;
     public Material materialDano;
@@ -14,12 +15,8 @@ public class TrocaCorDano : MonoBehaviour
         playerRenderer.material = materialOriginal;
     }
     
-    public void TakeDamage(bool trocar){
-        Debug.Log("papai");
-        if(trocar){
+    public void TakeDamage(){
         StartCoroutine(FlashWhite());
-        trocar = false;
-        }
     }
     private IEnumerator FlashWhite()
     {

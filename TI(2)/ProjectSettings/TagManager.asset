@@ -10,7 +10,7 @@ TagManager:
   - Note
   - PlayerAmarelo
   - PlayerVermelho
-  - BuffRecuperarVida
+  - BuffVida
   layers:
   - Default
   - TransparentFX

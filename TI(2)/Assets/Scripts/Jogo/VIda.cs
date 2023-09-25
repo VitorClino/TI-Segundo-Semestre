@@ -9,33 +9,26 @@ public class VIda : MonoBehaviour
     public bool IMORTAL = false;
     public GameObject panel;
     public Text m_Vida;
-    void OnEnable()
-    {
-        vida = 10;
-        InvokeRepeating("RecuperarVida", 0.1f, 0.2f);
+
+    void OnEnable(){
         InvokeRepeating("Derrota", 0.1f, 0.1f);
     }
-    void OnTriggerEnter(Collider other)
-    {
-        if (IMORTAL == false||other.gameObject.CompareTag("Note")) vida--;
-        else vida = 10;
+    void OnTriggerEnter(Collider other){
+        if (other.tag == "Note" && IMORTAL == false){
+        vida--;
+        
+        TrocaCorDano trocaCorDano = FindObjectOfType<TrocaCorDano>();
+        trocaCorDano.TakeDamage();
+        }
+        
         Destroy(other.gameObject);
-        m_Vida.text = $"Vida: {vida.ToString()}";
-
     }
-    void Derrota()
-    {
-        if(vida <= 0)
-        {
+    void Derrota(){
+        m_Vida.text = $"Vida: {vida}";
+        if(vida <= 0){
             panel.SetActive(true);
             Time.timeScale = 0;
         }
     }
-    public void RecuperarVida(bool recuperar)
-    {
-        if (recuperar){
-        vida=10;
-        Debug.Log(vida);
-        }
-    }
+    public void RecuperarVida(){vida=16;}
 }

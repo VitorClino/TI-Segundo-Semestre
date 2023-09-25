@@ -19,18 +19,15 @@ public class GameController : MonoBehaviour
     }
     public void CriarPlayer(int i)
     {
-        int personagem = 0;
         int j =0;
         if (i==1)
         {
-            personagem = j;
             j=i;
             Destroy(auxPlayer);
             auxPlayer = Instantiate(player[j], spawn , transform.rotation );
         }
         if (i==(-1))
         {
-            personagem = j;
             j=0;
             Destroy(auxPlayer);
             auxPlayer = Instantiate(player[j], spawn , transform.rotation );

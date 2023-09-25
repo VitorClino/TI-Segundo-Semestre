@@ -12,11 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Game.unity
     guid: c850ee8c3b14cc8459e7e186857cf567
   - enabled: 1
-    path: Assets/Scenes/Dificuldade.unity
-    guid: 836c5917602866a4385a42a35be3bfa9
-  - enabled: 1
     path: Assets/Scenes/Loja.unity
     guid: 0d85cfddbb82acd43baa73dfc7bfded4
   m_configObjects:
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000,
+      guid: fe59fc6edf5772b4fb3bf1e262cc3fd9, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: daf238aa06de30b4a915808e3d17e273,
+      type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000,
+      guid: 3dc45a6a9ae8dc34683b544e750b2946, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
       guid: ded593ee5369d3b4cab263ebba1129f8, type: 2}
