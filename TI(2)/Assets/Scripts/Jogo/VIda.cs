@@ -30,5 +30,5 @@ public class VIda : MonoBehaviour
             Time.timeScale = 0;
         }
     }
-    public void RecuperarVida(){vida=16;}
+    public void RecuperarVida(){vida=15;}
 }
